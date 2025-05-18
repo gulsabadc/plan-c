@@ -1,14 +1,9 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* @import url('../assets/colors.css'); */
+
 
 html,
 body {
@@ -17,9 +12,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +32,17 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.no-global-img {
+  max-width: none !important;
+  height: unset !important;
+}
+
+@keyframes cards-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.cards-marquee {
+  animation: cards-marquee 10s linear infinite;
 }
