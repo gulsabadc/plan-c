@@ -18,13 +18,10 @@ export default function Home() {
           src={heroBg}
           alt="Hero Background"
           fill
-          className="object-cover z-0"
           priority
         />
-        {/* Overlay */}
-        <div  />
         {/* Content on top */}
-        <div >
+        <div className="relative z-10">
           <Banner />
           <Cards />
           <Slider />

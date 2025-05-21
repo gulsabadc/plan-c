@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 const sliderText = [
-  'TRUSTED BY 10+ BRAND',
-  'MEDIUM TO LARGE DIGITAL HEALTH COMPANIES',
-  'SOFTWARE-BASED STARTUPS',
-  'LARGE PAYER ORGANIZATIONS',
-  'MID-SIZE BILLING VENDOR',
-  'MID-SIZE CAPTURE',
+  "TRUSTED BY 10+ BRAND",
+  "MEDIUM TO LARGE DIGITAL HEALTH COMPANIES",
+  "SOFTWARE-BASED STARTUPS",
+  "LARGE PAYER ORGANIZATIONS",
+  "MID-SIZE BILLING VENDOR",
+  "MID-SIZE CAPTURE",
 ];
 
 const marqueeAnimation = `
@@ -18,21 +18,31 @@ const marqueeAnimation = `
 `;
 
 const Slider = () => (
-  <section className="w-full bg-black overflow-hidden p-0 m-0 min-h-12 border-y-2 border-[#222] relative z-20">
+  <section className="w-full bg-black overflow-hidden p-0 m-0 min-h-12  relative z-20">
     <style>{marqueeAnimation}</style>
     <div
-      className="whitespace-nowrap inline-block font-bold text-base text-white tracking-wide py-3 animate-marquee"
-      style={{ animation: 'marquee 18s linear infinite' }}
+      className="whitespace-nowrap inline-block font-semibold  text-[rgba(255, 255, 255, 0.5)] tracking-wide py-[22px]  animate-marquee"
+      style={{ animation: "marquee 30s linear infinite" }}
     >
       {sliderText.map((text, idx) => (
-        <span key={idx} className={`mx-10 ${idx === 0 ? 'text-[#e6ff47]' : 'text-white'}`}>{text}</span>
+        <span
+          key={idx}
+          className={`mx-10 ${idx === 0 ? "text-[#e6ff47]" : "text-gray-400"}`}
+        >
+          {text}
+        </span>
       ))}
       {/* Repeat for smooth loop */}
       {sliderText.map((text, idx) => (
-        <span key={idx + sliderText.length} className={`mx-10 ${idx === 0 ? 'text-[#e6ff47]' : 'text-white'}`}>{text}</span>
+        <span
+          key={idx + sliderText.length}
+          className={`mx-10 ${idx === 0 ? "text-[#e6ff47]" : "text-gray-400"}`}
+        >
+          {text}
+        </span>
       ))}
     </div>
   </section>
 );
 
-export default Slider; 
+export default Slider;

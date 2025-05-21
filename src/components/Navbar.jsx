@@ -15,17 +15,9 @@ const Navbar = ({ variant = "black" }) => {
   const bgClass = variant === "transparent" ? "bg-transparent" : "bg-black";
 
   return (
-    <nav
-      className={`top-0 left-0 z-50 transition-colors duration-300 flex justify-between items-center px-8 py-6 ${bgClass} text-white font-normal text-[1.1rem] shadow-md relative`}
-    >
+    <div className={``}>
       <div className="flex">
-        <Image
-          src={planCLogo}
-          alt="PlanC Logo"
-          width={120}
-          height={40}
-          className="object-contain"
-        />
+       
       </div>
       {/* Desktop Nav */}
       <div className="nav-links flex justify-center gap-10">
@@ -83,7 +75,7 @@ const Navbar = ({ variant = "black" }) => {
           }
         }
       `}</style>
-    </nav>
+    </div>
   );
 };
 

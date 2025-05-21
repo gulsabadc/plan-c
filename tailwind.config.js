@@ -7,7 +7,11 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xl2: "1400px", // Custom breakpoint for 1400px
+      },
+    },
   },
   plugins: [],
 };

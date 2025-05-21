@@ -13,7 +13,7 @@ const navLinks = [
 const TransparentNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-8 py-6 text-white font-normal text-[1.1rem] shadow-md relative">
+    <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-8 pt-[2rem] text-white font-normal text-[1.1rem] shadow-none">
       <div className="flex items-center">
         <Image
           src={planCLogo}

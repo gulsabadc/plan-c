@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => (
   <section className="w-full flex flex-col items-center justify-start p-0">
-    <div className="relative z-20 flex flex-col items-center justify-center w-full pt-16 pb-8 px-4 text-center text-white">
+    <div className="mt-[6rem] relative z-20 flex flex-col items-center justify-center w-full pt-16 pb-8 px-4 text-center text-white">
       <div
         className="inline-block bg-[#e6ff47]/10 text-[#c6ff00] border border-[#e6ff47] rounded-full px-6 py-1.5 mb-6 text-center"
         style={{
@@ -53,23 +53,21 @@ const Banner = () => (
         in Information
       </h1>
       <div
+        className="mt-[4rem] p-[2px] rounded-[6px]"
         style={{
-          marginTop: "44px",
-          paddingTop: "15px",
-          paddingRight: "80px",
-          paddingBottom: "15px",
-          paddingLeft: "80px",
-          borderRadius: "6px",
-          borderWidth: "2px",
-          borderStyle: "solid",
-          borderImage:
-            "linear-gradient(93.34deg, #FEFFED 0.62%, rgba(255,255,255,0) 96.79%) 1",
-          
           background:
-            "linear-gradient(86.04deg, #5E79FF 27.69%, #3755ED 96.06%)",
+            "linear-gradient(93.34deg, #FEFFED 0%, rgba(255,255,255,0) 96.79%)",
+          display: "inline-block",
         }}
       >
-        <button className="font-semibold text-center text-lg hover:scale-105 transition-transform ">
+        <button
+          className="bg-gradient-to-r from-[#5E79FF] to-[#3755ED] text-white rounded-[6px] font-semibold text-lg shadow-md hover:scale-105 transition-transform px-[80px] py-[12px] w-full h-full"
+          style={{
+            border: "none",
+            background:
+              "linear-gradient(86.04deg, #5E79FF 27.69%, #3755ED 96.06%)",
+          }}
+        >
           Get in Touch &rarr;
         </button>
       </div>
