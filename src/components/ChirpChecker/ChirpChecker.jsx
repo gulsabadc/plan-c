@@ -1,10 +1,21 @@
-import React from 'react';
+import React from "react";
+import SectionWithImageAndText from "../SectionWithImageAndText/SectionWithImageAndText";
+import chirpCheckerImage from "../../../public/images/crystal.png";
 
-const ChirpChecker = () => (
-  <section style={{ background: 'linear-gradient(135deg, #1ed760 0%, #0a1a0a 100%)', color: 'var(--text-white)', padding: '2rem 1rem', textAlign: 'center' }}>
-    <h2>Welcome to ChirpChecker</h2>
-    <p>This is a placeholder for the ChirpChecker section, describing the product and its features.</p>
-  </section>
-);
+const ChirpChecker = () => {
+  const title = "Welcome to ChirpChecker";
+  const description =
+    "This is the ChirpChecker section, an AI-powered tool for truth verification and combating misinformation. It helps users analyze content for accuracy and identify potential disinformation.";
 
-export default ChirpChecker; 
+  return (
+    <SectionWithImageAndText
+      imageSrc={chirpCheckerImage}
+      title={title}
+      description={description}
+      imageLeft={true}
+      bgColor="transparent"
+    />
+  );
+};
+
+export default ChirpChecker;

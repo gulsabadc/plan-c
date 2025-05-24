@@ -1,4 +1,5 @@
 import React from "react";
+import GlobalButton from "../Button";
 
 const Banner = () => (
   <section className="w-full flex flex-col items-center justify-start p-0">
@@ -52,24 +53,8 @@ const Banner = () => (
         </span>{" "}
         in Information
       </h1>
-      <div
-        className="mt-[4rem] p-[2px] rounded-[6px]"
-        style={{
-          background:
-            "linear-gradient(93.34deg, #FEFFED 0%, rgba(255,255,255,0) 96.79%)",
-          display: "inline-block",
-        }}
-      >
-        <button
-          className="bg-gradient-to-r from-[#5E79FF] to-[#3755ED] text-white rounded-[6px] font-semibold text-lg shadow-md hover:scale-105 transition-transform px-[80px] py-[12px] w-full h-full"
-          style={{
-            border: "none",
-            background:
-              "linear-gradient(86.04deg, #5E79FF 27.69%, #3755ED 96.06%)",
-          }}
-        >
-          Get in Touch &rarr;
-        </button>
+      <div className="mt-[4rem]">
+        <GlobalButton variant="filled">Get in Touch &rarr;</GlobalButton>
       </div>
     </div>
   </section>
