@@ -23,29 +23,40 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
   ShortTitle,
 }) => {
   return (
-    <section className="flex flex-col items-center p-10 bg-[#0a1f0a] text-[#cccccc] md:flex-row md:items-start md:gap-10 md:p-16">
-      <div className="w-full mb-6 text-center md:w-80 md:flex-shrink-0 md:mb-0 md:text-left">
-        <div className="mb-4 md:mb-6">{iconOrImage}</div>
-        <h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2>
-      </div>
-      <div className="flex-grow w-full flex flex-col items-start">
-        <div className="w-full mb-6 md:mb-10">
-          <p className="text-lg mb-4 md:mb-6">{ShortTitle}</p>
-          <p className="text-lg">{description}</p>
+    <section className="pt-2 items-center p-10 text-[#cccccc] md:flex-row md:items-start  md:p-16">
+      <div className="flex ">
+        <div className="w-1/2 flex-1 mb-6  md:w-80 md:flex-shrink-0 md:mb-0">
+          <div className="">{iconOrImage}</div>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2>
         </div>
-        <div className="flex flex-col items-start w-full">
-          <div className="w-full mb-6 flex flex-col items-start">
-            {children}
+        <div className="flex-1 w-1/2 flex flex-col items-center md:items-start">
+          <div className="w-full mb-6 md:mb-10  md:text-left">
+            <p
+              className="text-[30px] font-semibold mb-1 text-[#D9D9D9]"
+              style={{ letterSpacing: "-4%" }}
+            >
+              {ShortTitle}
+            </p>
+            <p
+              className="text-[30px] font-semibold mb-4 md:mb-6 text-[#D9D9D9] opacity-[50%]"
+              style={{ letterSpacing: "-4%" }}
+            >
+              {description}
+            </p>
           </div>
-          {
-          showLearnMoreButton && (
-            <div className="mt-2 w-full flex justify-center md:justify-start">
-              <GlobalButton variant={variant} href={learnMoreLink}>
-                Learn More →{" "}
-              </GlobalButton>
-            </div>
-          )}
         </div>
+      </div>
+      <div className="flex flex-col items-center w-full ">
+        <div className="w-full mb-6 flex flex-col items-center ">
+          {children}
+        </div>
+        {showLearnMoreButton && (
+          <div className="mt-2 w-full flex justify-center ">
+            <GlobalButton variant={variant} href={learnMoreLink}>
+              Learn More →{" "}
+            </GlobalButton>
+          </div>
+        )}
       </div>
     </section>
   );
