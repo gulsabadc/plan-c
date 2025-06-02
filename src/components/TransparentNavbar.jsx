@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import planCLogo from "../assets/images/PlanC.png";
 
 const navLinks = [
@@ -13,25 +14,27 @@ const navLinks = [
 const TransparentNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-8 pt-[2rem] text-white font-normal text-[1.1rem] shadow-none">
+    <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-8 pt-[2rem] text-white font-normal text-[26px] shadow-none">
       <div className="flex items-center">
-        <Image
-          src={planCLogo}
-          alt="PlanC Logo"
-          width={120}
-          height={40}
-          className="object-contain"
-        />
+        <Link href="/">
+          <Image
+            src={planCLogo}
+            alt="PlanC Logo"
+            width={120}
+            height={40}
+            className="object-contain"
+          />
+        </Link>
       </div>
-      <div className="nav-links flex gap-10">
+      <div className="nav-links text-[26px] flex gap-10">
         {navLinks.map((link) => (
-          <a
+          <Link
             key={link.href}
             href={link.href}
-            className="text-white font-bold hover:text-[#1ed760] transition-colors"
+            className="text-white font-bold hover:text-[#1ed760] transition-colors text-[26px]"
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
       <div
@@ -45,14 +48,14 @@ const TransparentNavbar = () => {
       {menuOpen && (
         <div className="mobile-menu absolute top-full right-0 bg-black/70 shadow-lg rounded-b-lg p-6 flex flex-col gap-6 md:hidden">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="text-white font-bold text-lg"
+              className="text-white font-bold text-[26px]"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}

@@ -11,7 +11,7 @@ const Services = () => {
 
   // Define common classes for service items
   const serviceItemClasses =
-    "text-white px-[30px] py-[20px] mb-4 w-[50%] rounded-[1px] text-center font-bold text-[40px] text-center";
+    " letter-spacing-[-4%] text-white px-[70px] py-[50px] m-4 w-[100%] rounded-[10px] text-left font-bold text-[40px] ";
 
   return (
     <div
@@ -39,27 +39,32 @@ const Services = () => {
       >
         {/* List of services go here with styling */}
         <div
-          className={`${serviceItemClasses} mt-[3rem] bg-[#4A7453] border border-[#4C4C4C]`}
+          className={`${serviceItemClasses} mt-[3rem] bg-[#4A7453] border border-[#4C4C4C] blend-multiply`} 
+          style={{letterSpacing: "-4%", lineHeight:'59px'}}
         >
           Product Vision & Strategy
         </div>
         <div
           className={`${serviceItemClasses} bg-[#3A6743] border border-[#4C4C4C]`}
+          style={{letterSpacing: "-4%", lineHeight:'59px'}}
         >
           Market Analysis & Positioning
         </div>
         <div
           className={`${serviceItemClasses}  bg-[#2D5536] border border-[#4C4C4C]`}
+          style={{letterSpacing: "-4%", lineHeight:'59px'}}
         >
           Agile Product Development
         </div>
         <div
           className={`${serviceItemClasses}  bg-[#1D4426] border border-[#4C4C4C]`}
+          style={{letterSpacing: "-4%", lineHeight:'59px'}}
         >
           Go-to-Market Planning
         </div>
         <div
           className={`${serviceItemClasses}  bg-[#14361C] border border-[#4C4C4C]`}
+          style={{letterSpacing: "-4%", lineHeight:'59px'}}
         >
           AI & Emerging Technology Integration
         </div>

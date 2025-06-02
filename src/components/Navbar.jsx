@@ -64,6 +64,7 @@ const Navbar = ({ variant = "black" }) => {
         @media (max-width: 768px) {
           .nav-links {
             display: none !important;
+            font-size:26px !important;
           }
           .hamburger {
             display: flex !important;

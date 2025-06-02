@@ -14,8 +14,8 @@ const Welcome = () => {
   return (
     <SectionWithImageAndText
       imageSrc={crystalImage}
-      imageWidth={194}
-      imageHeight={194}
+      imageWidth={200}
+      imageHeight={200}
       imageText1={imageText1}
       imageText2={imageText2}
       title={title}

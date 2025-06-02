@@ -13,7 +13,7 @@ const GlobalButton: React.FC<GlobalButtonProps> = ({
   variant = 'filled',
   href,
 }) => {
-  const baseClasses = "rounded-[6px] font-semibold text-lg shadow-md hover:scale-105 transition-transform";
+  const baseClasses = "rounded-[6px] font-semibold text-lg  hover:scale-105 transition-transform";
 
   const filledStyles = {
     buttonClasses: `${baseClasses} bg-gradient-to-r from-[#5E79FF] to-[#3755ED] text-white px-[80px] py-[12px] w-full h-full`,
@@ -31,11 +31,11 @@ const GlobalButton: React.FC<GlobalButtonProps> = ({
   };
 
   const outlinedStyles = {
-    buttonClasses: `${baseClasses} px-[30px] py-[10px]`,
+    buttonClasses: `${baseClasses} px-[80px] py-[20px]`,
     buttonStyle: {
-      color: '#63b3ed',
+      color: '#FFFFFF',
       textDecoration: 'none',
-      border: '1px solid #63b3ed',
+      border: '1px solid #FFFFFF',
       background: 'transparent',
     },
     outerDivClasses: "",

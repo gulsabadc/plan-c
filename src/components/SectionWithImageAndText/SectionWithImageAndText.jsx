@@ -17,25 +17,25 @@ const SectionWithImageAndText = ({
 }) => {
   const sectionStyle = backgroundImageSrc
     ? {
-        backgroundImage: `url(${backgroundImageSrc.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }
+      backgroundImage: `url(${backgroundImageSrc.src})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }
     : {};
 
   return (
     <section
-      className={`w-full py-16 px-4 md:px-8 lg:px-16 ${bgColor} relative z-10`}
+      className={`w-full py-[90px] px-[160px] relative z-10`}
       style={sectionStyle}
     >
       <div
-        className={`max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-8 ${
-          imageLeft ? "" : "md:flex-row-reverse"
-        }`}
+        className={`max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-8 ${imageLeft ? "" : "md:flex-row-reverse"
+          }`}
       >
         <div className="w-full md:w-1/2">
           <Image
+            className="crystal-float transform-gpu animate-crystal-float animate-crystal-spin mb-4"
             src={imageSrc}
             alt={title}
             width={imageWidth}
@@ -47,8 +47,8 @@ const SectionWithImageAndText = ({
               lineHeight: "62px",
               letterSpacing: "-3%",
             }}
+            dangerouslySetInnerHTML={{ __html: imageText1 }}
           >
-            {imageText1}
           </p>
           <p
             className="text-[60px] text-[#BFFF00] font-bold"
@@ -62,7 +62,7 @@ const SectionWithImageAndText = ({
         </div>
         <div className="w-full md:w-1/2 text-white ">
           <h2
-            className="text-[30px] font-semibold mb-4"
+            className="text-[30px] font-semibold mb-4 high-contrast-text"
             style={{
               lineHeight: "46px",
               letterSpacing: "-4%",
@@ -71,10 +71,10 @@ const SectionWithImageAndText = ({
             {title}
           </h2>
           <p
-            className="text-lg leading-relaxed text-[#FFFFFF80]"
+            className="text-[30px] font-semibold leading-relaxed text-[#FFFFFF80]"
             style={{
-              lineHeight: "36px",
-              letterSpacing: "-3%",
+              lineHeight: "46px",
+              letterSpacing: "-4%",
             }}
             dangerouslySetInnerHTML={{ __html: description }}
           ></p>

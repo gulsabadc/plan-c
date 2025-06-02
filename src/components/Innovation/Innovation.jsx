@@ -1,37 +1,61 @@
 import React from "react";
-import SectionLayout from "./components/SectionLayout";
-import innovationImage from "../../assets/images/innovation-crystal.png"; // TODO: Replace with the actual image for Innovation
+import innovationImage from "../../assets/images/innovation-crystal.png";
+import innovationBg from "../../assets/images/Innovation-bg.png";
+import SectionLayout from "../SectionLayout";
+import mockup from "../../assets/images/mockup.png";
+import GlobalButton from "../Button";
 
 const Innovation = () => {
-  const title = "Overview of Plan C, LLC";
-  const description =
-    "We are a Boston-based consulting and AI innovation firm specializing in strategic product management & trustworthy AI solutions. Our mission is to empower companies to achieve product success while using AI to combat misinformation. By integrating ethical AI practices, we help businesses navigate challenges and seize opportunities in a complex digital landscape, fostering trust and transparency with their users.";
-
   return (
-    <SectionLayout
-      iconOrImage={
-        <img
-          src={innovationImage.src}
-          alt="Innovation Icon"
-          style={{ width: "100px", height: "100px" }}
-        />
-      }
-      title="Our Innovation"
-      description="AI-powered truth verification that stops misinformation before it spreads. We analyze digital content in real-time, providing instant credibility insights. Transforming how we consume and share information."
-      showLearnMoreButton={true}
-      learnMoreLink="/innovation" // Or wherever the learn more page is
+    <div style={{
+      backgroundImage: `url(${innovationBg.src})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
     >
-      {/* The ChirpChecker screenshot goes here */}
-      <div>
-        <h3>Presenting ChirpChecker — A Plan C for Truth in the Digital Age</h3>
-        <p>
-          Misinformation has become a global crisis, eroding trust in public
-          discourse. Instead of waiting for tech giants to address the problem,
-          Plan C took action.
-        </p>
-        {/* <img src="/path/to/chirpchecker-screenshot.png" alt="ChirpChecker Screenshot" /> */}
+      <SectionLayout
+        iconOrImage={
+          <img
+            src={innovationImage.src}
+            alt="Innovation Icon"
+            style={{ width: "190px", height: "200px" }}
+          />
+        }
+        title="Our Innovation"
+        ShortTitle="AI-powered truth verification that stops"
+        description="misinformation before it spreads. We analyze digital content in real-time, providing instant credibility insights. Transforming how we consume and share information."
+        // showLearnMoreButton={true}
+        learnMoreLink="/innovation"
+        variant="outlined"
+      >
+        <div className="flex flex-col items-center mt-[9rem] text-center  max-w-6xl mx-auto">
+          <h3 className="text-[60px] font-bold text-white mb-4" style={{ letterSpacing: "-4%", lineHeight: '70px' }}>
+            Presenting <span className="text-[#BFFF00]">ChirpChecker</span> —
+            <br />A Plan C for Truth in the Digital Age
+          </h3>
+          <p className="text-[30px] font-medium text-white mt-5  max-w-4xl" style={{ letterSpacing: "-4%", lineHeight: '46px' }}>
+            Misinformation has become a global crisis, eroding trust in<br />
+            <span className="text-[#FFFFFF80]">public discourse. Instead of waiting for tech giants to
+              address the problem, Plan C took action.</span>
+          </p>
+
+        </div>
+
+      </SectionLayout>
+      <div className="w-full flex justify-center">
+        <img
+          src={mockup.src}
+          alt="ChirpChecker Screenshot"
+
+        />
       </div>
-    </SectionLayout>
+      <div className="pb-[5rem] w-full flex justify-center ">
+        <GlobalButton variant={"outlined"} href='#'>
+          Learn More →{" "}
+        </GlobalButton>
+      </div>
+    </div>
   );
 };
 
