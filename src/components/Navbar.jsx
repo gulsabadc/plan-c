@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import planCLogo from "../assets/images/PlanC.png";
 
 const navLinks = [
@@ -22,13 +23,13 @@ const Navbar = ({ variant = "black" }) => {
       {/* Desktop Nav */}
       <div className="nav-links flex justify-center gap-10">
         {navLinks.map((link) => (
-          <a
+          <Link
             key={link.href}
             href={link.href}
             className="text-white font-bold hover:text-[#1ed760] transition-colors"
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
       {/* Hamburger for mobile */}
@@ -48,14 +49,14 @@ const Navbar = ({ variant = "black" }) => {
           } shadow-lg rounded-b-lg p-6 flex flex-col gap-6 md:hidden`}
         >
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-white font-bold text-lg"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}
