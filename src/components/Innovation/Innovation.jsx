@@ -19,7 +19,7 @@ const Innovation = () => {
           <img
             src={innovationImage.src}
             alt="Innovation Icon"
-            style={{ width: "190px", height: "200px" }}
+            style={{ width: "250px", height: "250px" }}
           />
         }
         title="Our Innovation"
@@ -52,7 +52,8 @@ const Innovation = () => {
       </div>
       <div className="pb-[5rem] w-full flex justify-center ">
         <GlobalButton variant={"outlined"} href='#'>
-          Learn More →{" "}
+          Learn More
+          <span className="ml-2"> →</span>
         </GlobalButton>
       </div>
     </div>

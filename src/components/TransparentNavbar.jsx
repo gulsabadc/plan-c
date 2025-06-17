@@ -11,7 +11,13 @@ const navLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-const TransparentNavbar = () => {
+function normalizePath(path) {
+  if (!path) return "/";
+  return path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+}
+
+const TransparentNavbar = ({ currentPath }) => {
+  console.log("currentPath", currentPath);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-8 pt-[2rem] text-white font-normal text-[26px] shadow-none">
@@ -25,7 +31,11 @@ const TransparentNavbar = () => {
           <Link
             key={link.href}
             href={link.href}
-            className="text-white font-bold hover:text-[#1ed760] transition-colors text-[26px]"
+            className={`nav-link${
+              normalizePath(currentPath) === normalizePath(link.href)
+                ? " active"
+                : ""
+            }`}
           >
             {link.label}
           </Link>
@@ -45,7 +55,11 @@ const TransparentNavbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white font-bold text-[26px]"
+              className={`nav-link text-[26px]${
+                normalizePath(currentPath) === normalizePath(link.href)
+                  ? " active"
+                  : ""
+              }`}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -66,6 +80,26 @@ const TransparentNavbar = () => {
           .mobile-menu {
             display: none !important;
           }
+        }
+        .nav-link {
+          color: white;
+          font-weight: 500;
+          position: relative;
+          padding: 0 8px;
+          text-decoration: none;
+        }
+        .nav-link.active {
+          color: #c6ff4f;
+          font-weight: 700;
+        }
+        .nav-link.active::after {
+          content: "";
+          display: block;
+          height: 4px;
+          background: #c6ff4f;
+          border-radius: 2px;
+          margin-top: 2px;
+          width: 100%;
         }
       `}</style>
     </nav>

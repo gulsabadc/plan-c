@@ -11,7 +11,15 @@ const navLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-const BlackNavbar = () => {
+function normalizePath(path) {
+  if (!path) return "/";
+  return path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+}
+
+const BlackNavbar = ({ currentPath }) => {
+  console.log("currentPath", normalizePath(currentPath));
+  
+
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="w-full top-0 left-0 z-50 bg-black transition-colors duration-300 flex justify-between items-center px-8 py-6 text-white font-normal text-[1.1rem] shadow-md relative">
@@ -26,12 +34,16 @@ const BlackNavbar = () => {
           />
         </Link>
       </div>
-      <div className="nav-links flex gap-10">
+      <div className="nav-links text-[26px] flex gap-10">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="text-white font-bold hover:text-[#1ed760] transition-colors"
+            className={`nav-link${
+              normalizePath(currentPath) === normalizePath(link.href)
+                ? " active"
+                : ""
+            }`}
           >
             {link.label}
           </Link>
@@ -51,7 +63,11 @@ const BlackNavbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white font-bold text-lg"
+              className={`nav-link text-[26px]${
+                normalizePath(currentPath) === normalizePath(link.href)
+                  ? " active"
+                  : ""
+              }`}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -65,7 +81,7 @@ const BlackNavbar = () => {
             display: none !important;
           }
           .hamburger {
-            display: flex !important;
+            display: flex !important;a
           }
         }
         @media (min-width: 769px) {
@@ -73,6 +89,14 @@ const BlackNavbar = () => {
             display: none !important;
           }
         }
+        .nav-link {
+          color: white;
+          font-weight: 500;
+          position: relative;
+          padding: 0 8px;
+          text-decoration: none;
+        }
+       
       `}</style>
     </nav>
   );

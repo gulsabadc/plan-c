@@ -11,8 +11,8 @@ const Overview = () => {
   return (
     <SectionWithImageAndText
       imageSrc={crystalImage}
-      imageWidth={200}
-      imageHeight={200}
+      imageWidth={250}
+      imageHeight={250}
       imageText1={imageText1}
       title={title}
       description={description}

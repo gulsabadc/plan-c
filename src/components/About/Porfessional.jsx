@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import founderBg from "../../assets/images/service-bg.png";
 import porfessionalImage from "../../assets/images/Diagram.png";
+import GlobalButton from "../Button";
 
 const Porfessional = () => {
   return (
@@ -20,6 +21,12 @@ const Porfessional = () => {
         alt="porfessional"
         className="w-full h-full object-contain"
       />
+      <div className="mt-[4rem] flex justify-center">
+        <GlobalButton variant="filled">
+          Talk to Our Product Strategy Expert
+          <span className="ml-2"> →</span>
+        </GlobalButton>
+      </div>
     </section>
   );
 };

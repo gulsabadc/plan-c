@@ -54,7 +54,9 @@ const Banner = () => (
         in Information
       </h1>
       <div className="mt-[4rem]">
-        <GlobalButton variant="filled">Get in Touch &rarr;</GlobalButton>
+        <GlobalButton variant="filled">Get in Touch
+          <span className="ml-2"> →</span>
+        </GlobalButton>
       </div>
     </div>
   </section>

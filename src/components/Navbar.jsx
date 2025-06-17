@@ -11,22 +11,29 @@ const navLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-const Navbar = ({ variant = "black" }) => {
+function normalizePath(path) {
+  if (!path) return "/";
+  return path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+}
+
+const Navbar = ({ variant = "black", currentPath }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const bgClass = variant === "transparent" ? "bg-transparent" : "bg-black";
 
   return (
     <div className={``}>
-      <div className="flex">
-       
-      </div>
+      <div className="flex"></div>
       {/* Desktop Nav */}
       <div className="nav-links flex justify-center gap-10">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="text-white font-bold hover:text-[#1ed760] transition-colors"
+            className={`nav-link${
+              normalizePath(currentPath) === normalizePath(link.href)
+                ? " active"
+                : ""
+            }`}
           >
             {link.label}
           </Link>
@@ -52,7 +59,11 @@ const Navbar = ({ variant = "black" }) => {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white font-bold text-lg"
+              className={`nav-link text-lg${
+                normalizePath(currentPath) === normalizePath(link.href)
+                  ? " active"
+                  : ""
+              }`}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -65,7 +76,7 @@ const Navbar = ({ variant = "black" }) => {
         @media (max-width: 768px) {
           .nav-links {
             display: none !important;
-            font-size:26px !important;
+            font-size: 26px !important;
           }
           .hamburger {
             display: flex !important;
@@ -75,6 +86,26 @@ const Navbar = ({ variant = "black" }) => {
           .mobile-menu {
             display: none !important;
           }
+        }
+        .nav-link {
+          color: white;
+          font-weight: 500;
+          position: relative;
+          padding: 0 8px;
+          text-decoration: none;
+        }
+        .nav-link.active {
+          color: #c6ff4f;
+          font-weight: 700;
+        }
+        .nav-link.active::after {
+          content: "";
+          display: block;
+          height: 4px;
+          background: #c6ff4f;
+          border-radius: 2px;
+          margin-top: 2px;
+          width: 100%;
         }
       `}</style>
     </div>

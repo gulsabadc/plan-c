@@ -24,7 +24,7 @@ const Process = () => {
           <img
             src={processCrystal.src}
             alt="process Icon"
-            style={{ width: "190px", height: "200px" }}
+            style={{ width: "250px", height: "250px" }}
           />
         }
         title={title}

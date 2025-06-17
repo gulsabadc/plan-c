@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import PlanCLogo from "../assets/images/PlanC.png"; 
+import PlanCLogo from "../assets/images/PlanC.png";
 import footerBgImage from "../assets/images/footer-bg.png";
+import MovingBanner from "./MovingBanner";
 
 const Footer = () => (
   <footer
-    className="bg-[#011706] text-white py-12 px-4 md:px-8 lg:px-16 relative z-10"
+    className=" py-12 px-4  relative z-10"
     style={{
       backgroundImage: `url(${footerBgImage.src})`,
       backgroundSize: "cover",
@@ -13,7 +14,7 @@ const Footer = () => (
       backgroundRepeat: "no-repeat",
     }}
   >
-    <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+    <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between gap-[90px] text-[#FEFFED]  py-[50px]">
       {/* Left Section */}
       <div className="flex-1 flex-col mr-1">
         <div
@@ -33,24 +34,19 @@ const Footer = () => (
       {/* Right Section - Contains links, separator, and copyright */}
       <div className="flex-1 flex-col mt-7">
         {/* Right Section - Columns */}
-        <div className="flex flex-row mb-5">
+        <div
+          className="flex flex-row mb-10 text-[26px] font-bold"
+          style={{ letterSpacing: "-4%", lineHeight: "100%" }}
+        >
           {/* Column 1 */}
-          <div className="flex flex-col gap-4 mr-[7rem]">
-            <a href="#" className="text-white hover:text-gray-300">
-              Home
-            </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              About
-            </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              Services
-            </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              Contact Us
-            </a>
+          <div className="flex flex-col gap-8 mr-[7rem]">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact Us</a>
           </div>
           {/* Column 2 */}
-          <div className="flex flex-col gap-4 ">
+          <div className="flex flex-col gap-8 ">
             <a href="#" className="text-white hover:text-gray-300">
               ChirpChecker
             </a>
@@ -64,14 +60,18 @@ const Footer = () => (
         </div>
 
         {/* Separator Line */}
-        <div className="border-t border-[#BFFF00]"></div>
+        <div className="border-t border-[2px] border-[#BFFF00]"></div>
 
         {/* Copyright */}
-        <div className="text-left text-gray-300 text-sm mt-4">
+        <div
+          className="text-left font-[400] text-lg mt-4"
+          style={{ letterSpacing: "-4%", lineHeight: "100%" }}
+        >
           ©PLANC 2025 ALL RIGHT RESERVE
         </div>
       </div>
     </div>
+    <MovingBanner />
   </footer>
 );
 

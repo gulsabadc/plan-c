@@ -56,9 +56,10 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
           {children}
         </div>
         {showLearnMoreButton && (
-          <div className="m-4 w-full flex justify-center m-10">
+          <div className="m-0 w-full flex justify-center ">
             <GlobalButton variant={variant} href={learnMoreLink}>
-              Learn More →{" "}
+              Learn More
+              <span className="ml-2"> →</span>
             </GlobalButton>
           </div>
         )}

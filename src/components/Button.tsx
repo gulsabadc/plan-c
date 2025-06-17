@@ -35,8 +35,9 @@ const GlobalButton: React.FC<GlobalButtonProps> = ({
     buttonStyle: {
       color: '#FFFFFF',
       textDecoration: 'none',
-      border: '1px solid #FFFFFF',
+      border: '2px solid #FFFFFF',
       background: 'transparent',
+      fontWeight: '700',
     },
     outerDivClasses: "",
     outerDivStyle: {}

@@ -9,15 +9,15 @@ import item04 from "../../assets/images/item04.png";
 import item05 from "../../assets/images/item05.png";
 import SectionLayout from "../../components/SectionLayout";
 
-const ServiceItem = ({key, text, backgroundImage }) => (
-  console.log(firstItem),
+const ServiceItem = ({ index, text, backgroundImage }) => (
   <div
     className="text-white px-[70px] py-[50px] m-4 w-[100%] rounded-[10px] text-left font-bold text-[40px] relative overflow-hidden"
     style={{
       letterSpacing: "-4%",
       lineHeight: "59px",
       border: "1px solid #4C4C4C",
-      marginTop: key === 0 ? "40px" : {},
+      marginTop: index === 0 ? "70px" : "10px",
+      marginBottom: index === 4 ? "50px" : "10px",
     }}
   >
     {/* Background image layer */}
@@ -101,9 +101,9 @@ const Services = () => {
         {serviceItems.map((item, index) => (
           <ServiceItem
             key={index}
+            index={index}
             text={item.text}
             backgroundImage={item.backgroundImage}
-            // style={}
           />
         ))}
       </SectionLayout>
