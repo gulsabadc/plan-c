@@ -17,13 +17,7 @@ const TransparentNavbar = () => {
     <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-8 pt-[2rem] text-white font-normal text-[26px] shadow-none">
       <div className="flex items-center">
         <Link href="/">
-          <Image
-            src={planCLogo}
-            alt="PlanC Logo"
-            width={120}
-            height={40}
-            className="object-contain"
-          />
+          <Image src={planCLogo} alt="PlanC Logo" width={131} height={36} />
         </Link>
       </div>
       <div className="nav-links text-[26px] flex gap-10">

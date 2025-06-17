@@ -20,7 +20,7 @@ const Banner = () => (
       <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight m-0 text-center">
         Empowering{" "}
         <span
-          className="text-[#1ed760]"
+          className="text-[#BFFF00]"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 700,

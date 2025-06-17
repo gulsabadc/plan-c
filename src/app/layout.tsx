@@ -1,6 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/600-italic.css";
+import "@fontsource/playfair-display/700-italic.css";
 import "./globals.css";
 import Footer from "../components/Footer";
 import ClientNavbarWrapper from "../components/ClientNavbarWrapper";
@@ -23,6 +26,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+
 
 
 

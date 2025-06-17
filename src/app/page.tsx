@@ -21,16 +21,17 @@ export default function Home() {
         }}
       ></div>
       
-      <div className="relative w-full z-[2]">
+      <div className="relative w-full z-[2] m-0 p-0">
         {/* Background Image */}
         <Image
           src={heroBg}
           alt="Hero Background"
           fill
           priority
+          className="object-cover"
         />
         {/* Content on top */}
-        <div className="relative z-[3]">
+        <div className="relative z-[3] m-0 p-0">
           <Banner />
           <Cards />
           <Slider />
@@ -43,4 +44,5 @@ export default function Home() {
     </>
   );
 }
+
 

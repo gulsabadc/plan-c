@@ -12,21 +12,24 @@ const SectionWithImageAndText = ({
   title,
   description,
   imageLeft = true,
-  bgColor = "transparent",
+  bgColor = "#00310A",
   backgroundImageSrc,
 }) => {
   const sectionStyle = backgroundImageSrc
     ? {
       backgroundImage: `url(${backgroundImageSrc.src})`,
       backgroundSize: "cover",
-      backgroundPosition: "center",
+      backgroundPosition: "center top", // Changed to top alignment
       backgroundRepeat: "no-repeat",
+      // backgroundColor: '#00310A',
+      // margin: 0,
+      // padding: 0,
     }
     : {};
 
   return (
     <section
-      className={`w-full py-[90px] px-[160px] relative z-10`}
+      className={`w-full  py-[90px] px-[160px] relative z-10 m-0`}
       style={sectionStyle}
     >
       <div
@@ -37,7 +40,7 @@ const SectionWithImageAndText = ({
           <Image
             className="crystal-float transform-gpu animate-crystal-float animate-crystal-spin mb-4"
             src={imageSrc}
-            alt={title}
+            alt={title || "Image"}
             width={imageWidth}
             height={imageHeight}
           />
