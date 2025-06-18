@@ -59,7 +59,7 @@ export default function ContactPage() {
             alt="Contact Crystal"
             width={200}
             height={200}
-            className="mb-6"
+            className="crystal-float transform-gpu animate-crystal-float animate-crystal-spin mb-4"
             style={{ minWidth: 90, minHeight: 90 }}
           />
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 text-center md:text-left">

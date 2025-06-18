@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Banner from "../components/Banner/Banner";
-import Cards from "../components/Cards/Cards";
-import Slider from "../components/Slider/Slider";
-import Welcome from "../components/Welcome/Welcome";
-import Services from "../components/Services/Services";
-import Innovation from "../components/Innovation/Innovation";
+import Banner from "../components/HomePage/Banner";
+import Cards from "../components/HomePage/Cards";
+import Slider from "../components/HomePage/Slider";
+import Welcome from "../components/HomePage/Welcome";
+import Innovation from "../components/HomePage/Innovation";
+import Services from "../components/HomePage/Services";
 import heroBg from "../assets/images/hero-bg.png";
 import textureImage from "../assets/images/texture.png";
 

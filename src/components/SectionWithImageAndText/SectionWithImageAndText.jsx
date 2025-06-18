@@ -65,7 +65,7 @@ const SectionWithImageAndText = ({
         </div>
         <div className="w-full md:w-1/2 text-white ">
           <h2
-            className="text-[30px] font-semibold mb-4 high-contrast-text"
+            className="text-[30px] font-semibold mb-2 high-contrast-text"
             style={{
               lineHeight: "46px",
               letterSpacing: "-4%",
