@@ -164,3 +164,13 @@ body, html {
   width: 100%;
 }
 
+.playfair-italic-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 59px;
+  letter-spacing: -4%;
+  display: inline-block;
+  color:#BFFF00;
+}
+

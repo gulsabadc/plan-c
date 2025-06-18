@@ -1,0 +1,10 @@
+.playfair-italic-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 54px;
+  line-height: 59px;
+  letter-spacing: -4%;
+  text-align: center;
+  display: inline-block;
+} 
