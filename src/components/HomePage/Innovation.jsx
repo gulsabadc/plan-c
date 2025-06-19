@@ -35,7 +35,7 @@ const Innovation = () => {
             className="text-[60px] font-bold text-white mb-4"
             style={{ letterSpacing: "-4%", lineHeight: "70px" }}
           >
-            Presenting <span className="text-[#BFFF00]">ChirpChecker</span> —
+            Presenting <span className="">AmICredible</span> —
             <br />A Plan C for Truth in the Digital Age
           </h3>
           <p

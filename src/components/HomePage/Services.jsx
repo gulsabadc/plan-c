@@ -94,7 +94,7 @@ const Services = () => {
         ShortTitle={ShortTitle}
         description={description}
         learnMoreLink="/services"
-        variant="filled"
+        variant="outlined"
         showLearnMoreButton
       >
         {/* Map through service items with margin-top on first item */}

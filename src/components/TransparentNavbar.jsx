@@ -89,7 +89,6 @@ const TransparentNavbar = ({ currentPath }) => {
           text-decoration: none;
         }
         .nav-link.active {
-          color: #c6ff4f;
           font-weight: 700;
         }
         .nav-link.active::after {

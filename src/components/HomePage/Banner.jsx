@@ -5,7 +5,7 @@ const Banner = () => (
   <section className="w-full flex flex-col items-center justify-start p-0">
     <div className="mt-[6rem] relative z-20 flex flex-col items-center justify-center w-full pt-16 pb-8 px-4 text-center text-white">
       <div
-        className="inline-block bg-[#e6ff47]/10 text-[#c6ff00] border border-[#e6ff47] rounded-full px-6 py-1.5 mb-6 text-center"
+        className="inline-block   border border-[#FFFFFFF] bg-[#FFFFFF]/10 rounded-full px-6 py-2 mb-6 text-center"
         style={{
           fontFamily: "'Playfair Display', serif",
           fontWeight: 600,
@@ -17,16 +17,16 @@ const Banner = () => (
       >
         Innovative Strategy & AI Solutions
       </div>
-      <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight m-0 text-center">
-        Empowering{" "}
-        <span className="text-[54px] playfair-italic-bold">Product Growth</span>{" "}
-        and
+      <h1
+        className="font-bold text-3xl sm:text-4xl md:text-[54px] leading-tight m-0 text-center"
+        style={{ lineHeight: "59px", letterSpacing: "-4%" }}
+      >
+        Empowering Product Growth &
         <br />
-        <span className="playfair-italic-bold">Restoring Trust</span> in
-        Information
+        Restoring Trust in Information
       </h1>
       <div className="mt-[4rem]">
-        <GlobalButton variant="filled">
+        <GlobalButton variant="outlined">
           Get in Touch
           <span className="ml-2"> →</span>
         </GlobalButton>

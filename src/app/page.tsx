@@ -6,7 +6,7 @@ import Slider from "../components/HomePage/Slider";
 import Welcome from "../components/HomePage/Welcome";
 import Innovation from "../components/HomePage/Innovation";
 import Services from "../components/HomePage/Services";
-import heroBg from "../assets/images/hero-bg.png";
+import heroBg from "../assets/images/welcome-bg.png";
 import textureImage from "../assets/images/texture.png";
 
 export default function Home() {

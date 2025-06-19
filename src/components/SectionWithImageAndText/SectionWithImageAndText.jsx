@@ -54,7 +54,7 @@ const SectionWithImageAndText = ({
             dangerouslySetInnerHTML={{ __html: imageText1 }}
           ></p>
           <p
-            className="text-[60px] text-[#BFFF00] font-bold"
+            className="text-[60px]  font-bold"
             style={{
               lineHeight: "62px",
               letterSpacing: "-3%",
@@ -63,24 +63,20 @@ const SectionWithImageAndText = ({
             {imageText2}
           </p>
         </div>
-        <div className="w-full md:w-1/2 text-white ">
-          <h2
-            className="text-[30px] font-semibold mb-2 high-contrast-text"
+        <div className="w-full md:w-1/2 text-[#FFFFFF80] ">
+          <p
+            className="text-[30px] font-semibold mb-2 "
             style={{
               lineHeight: "46px",
               letterSpacing: "-4%",
             }}
           >
-            {title}
-          </h2>
-          <p
-            className="text-[30px] font-semibold leading-relaxed text-[#FFFFFF80]"
-            style={{
-              lineHeight: "46px",
-              letterSpacing: "-4%",
-            }}
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></p>
+            {title}{" "}
+            <span
+              className="text-[#FFFFFF80]"
+              dangerouslySetInnerHTML={{ __html: description }}
+            ></span>
+          </p>
         </div>
       </div>
     </section>

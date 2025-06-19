@@ -43,19 +43,15 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
           </h2>
         </div>
 
-        <div className="w-full md:w-1/2 ">
+        <div className="w-full md:w-1/2 text-[#D9D9D9] opacity-[50%]">
           <p
-            className="text-[30px] font-semibold mb-1 text-[#D9D9D9]"
+            className="text-[30px] font-semibold mb-1"
             style={{ letterSpacing: "-4%", lineHeight: "46px" }}
           >
-            {ShortTitle}
+            {ShortTitle}{" "}
+            <span className="">{description}</span>
           </p>
-          <p
-            className="text-[30px] font-semibold mb-4 md:mb-6 text-[#D9D9D9] opacity-[50%]"
-            style={{ letterSpacing: "-4%", lineHeight: "46px" }}
-          >
-            {description}
-          </p>
+         
         </div>
       </div>
       <div className="flex flex-col items-center w-full ">
