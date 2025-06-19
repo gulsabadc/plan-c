@@ -23,7 +23,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
   ShortTitle,
 }) => {
   return (
-    <section className="w-full py-[90px] px-[160px]  relative z-10">
+    <section className="w-full py-[6.25rem] px-[10rem]  relative z-10">
       <div
         className={`max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-2 "
         }`}

@@ -17,24 +17,25 @@ const SectionWithImageAndText = ({
 }) => {
   const sectionStyle = backgroundImageSrc
     ? {
-      backgroundImage: `url(${backgroundImageSrc.src})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center top", // Changed to top alignment
-      backgroundRepeat: "no-repeat",
-      // backgroundColor: '#00310A',
-      // margin: 0,
-      // padding: 0,
-    }
+        backgroundImage: `url(${backgroundImageSrc.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center top", // Changed to top alignment
+        backgroundRepeat: "no-repeat",
+        // backgroundColor: '#00310A',
+        // margin: 0,
+        // padding: 0,
+      }
     : {};
 
   return (
     <section
-      className={`w-full  py-[90px] px-[160px] relative z-10 m-0`}
+      className={`w-full  py-[6.25rem] px-[10rem] relative z-10 m-0`}
       style={sectionStyle}
     >
       <div
-        className={`max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-8 ${imageLeft ? "" : "md:flex-row-reverse"
-          }`}
+        className={`max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-8 ${
+          imageLeft ? "" : "md:flex-row-reverse"
+        }`}
       >
         <div className="w-full md:w-1/2">
           <Image
@@ -51,8 +52,7 @@ const SectionWithImageAndText = ({
               letterSpacing: "-3%",
             }}
             dangerouslySetInnerHTML={{ __html: imageText1 }}
-          >
-          </p>
+          ></p>
           <p
             className="text-[60px] text-[#BFFF00] font-bold"
             style={{

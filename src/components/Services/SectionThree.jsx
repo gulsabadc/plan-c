@@ -145,16 +145,16 @@ const ServiceItem = ({
 }) => {
   return (
     <div
-      className="text-white px-[70px] pt-[70px] rounded-[40px] pb-[100px] m-4 w-full  text-left font-bold text-[40px] relative overflow-hidden cursor-pointer transition-all duration-300"
+      className="text-white px-[4.375rem] pt-[4.375rem] rounded-[2.5rem] pb-[6.25rem] m-4 w-full text-left font-bold text-[2.5rem] relative overflow-hidden cursor-pointer transition-all duration-300"
       onClick={() => onToggle(index)}
       style={{
         letterSpacing: "-4%",
-        lineHeight: "59px",
+        lineHeight: "3.6875rem",
         border: "1px solid #4C4C4C",
-        marginTop: index === 0 ? "70px" : "-70px",
-        marginBottom: index === 4 ? "50px" : isActive ? "90px" : "10px",
-
-        minHeight: isActive ? "300px" : "150px",
+        marginTop: index === 0 ? "4.375rem" : "-4.375rem",
+        marginBottom:
+          index === 4 ? "3.125rem" : isActive ? "5.625rem" : "0.625rem",
+        minHeight: isActive ? "18.75rem" : "9.375rem",
       }}
     >
       {/* Background image */}

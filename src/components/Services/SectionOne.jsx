@@ -15,8 +15,8 @@ From product vision and market positioning to agile development and go-to-market
   return (
     <SectionWithImageAndText
       imageSrc={crystalImage}
-      imageWidth={250}
-      imageHeight={250}
+      imageWidth={15.625 * 16}
+      imageHeight={15.625 * 16}
       imageText1={imageText1}
       title={title}
       description={description}

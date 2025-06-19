@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 import processCrystal from "../../assets/images/process-crystal.png";
 import processDiagram from "../../assets/images/process-diagram.png";
 import servicesBg from "../../assets/images/service-bg.png";
 import SectionLayout from "../SectionLayout";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Process = () => {
-    const title = "Our Process";
+  const title = "Our Process";
   const description =
     "adaptable approach to solving challenges. Our process is designed to ensure clarity, alignment, and execution at every stage.";
   const ShortTitle = "At Plan C, we take a structured, yet ";
-  return ( 
-     <div
+  return (
+    <div
       style={{
         backgroundImage: `url(${servicesBg.src})`,
         backgroundSize: "cover",
@@ -24,7 +24,7 @@ const Process = () => {
           <img
             src={processCrystal.src}
             alt="process Icon"
-            style={{ width: "250px", height: "250px" }}
+            style={{ width: `${11.875}rem`, height: `${12.5}rem` }}
           />
         }
         title={title}
@@ -33,10 +33,12 @@ const Process = () => {
         learnMoreLink="/services"
       >
         {/* List of services go here with styling */}
-        <div className='mt-[5rem]'><Image src={processDiagram} alt="process" className="w-full" /></div>
+        <div className="mt-[5rem]">
+          <Image src={processDiagram} alt="process" className="w-full" />
+        </div>
       </SectionLayout>
     </div>
-  )
-}
+  );
+};
 
-export default Process
+export default Process;

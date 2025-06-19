@@ -21,7 +21,7 @@ const Navbar = ({ variant = "black", currentPath }) => {
   const bgClass = variant === "transparent" ? "bg-transparent" : "bg-black";
 
   return (
-    <div className={``}>
+    <nav className="w-full py-[1.25rem] px-[2.5rem] bg-white flex items-center justify-between">
       <div className="flex"></div>
       {/* Desktop Nav */}
       <div className="nav-links flex justify-center gap-10">
@@ -108,7 +108,7 @@ const Navbar = ({ variant = "black", currentPath }) => {
           width: 100%;
         }
       `}</style>
-    </div>
+    </nav>
   );
 };
 

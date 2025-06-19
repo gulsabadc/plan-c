@@ -18,7 +18,6 @@ function normalizePath(path) {
 
 const BlackNavbar = ({ currentPath }) => {
   console.log("currentPath", normalizePath(currentPath));
-  
 
   const [menuOpen, setMenuOpen] = useState(false);
   return (

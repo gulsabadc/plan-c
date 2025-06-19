@@ -17,14 +17,14 @@ const sectionStyle = {
 const SectionTwo = () => {
   return (
     <div
-      className="flex justify-center items-center h-full px-[160px] py-[90px]"
+      className="flex justify-center items-center h-full py-[6.25rem] px-[10rem]"
       style={sectionStyle}
     >
       <div className=" text-center ">
         <h2 className="text-white text-3xl md:text-[60px] font-bold mb-[100px]">
           Who We Help
         </h2>
-        <div className="flex flex-col md:flex-row justify-space-between  gap-[15rem]">
+        <div className="flex flex-col md:flex-row justify-space-between gap-[10rem]">
           {/* Startups */}
           <div className="flex flex-col items-center gap-10">
             <Image src={rocketImg} alt="Startups" width={270} height={270} />
