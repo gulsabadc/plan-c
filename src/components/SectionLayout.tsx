@@ -8,18 +8,14 @@ interface SectionLayoutProps {
   description: string;
   children?: React.ReactNode;
   showLearnMoreButton?: boolean;
-  learnMoreLink?: string;
-  variant?: "filled" | "outlined";
 }
 
 const SectionLayout: React.FC<SectionLayoutProps> = ({
-  variant,
   iconOrImage,
   title,
   description,
   children,
   showLearnMoreButton = false,
-  learnMoreLink = "#",
   ShortTitle,
 }) => {
   return (
