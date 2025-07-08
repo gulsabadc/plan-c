@@ -19,9 +19,11 @@ const SectionFour = () => {
       className="pt-[6.875rem] pb-[8.75rem] px-[10rem]"
       style={sectionStyle}
     >
-      <div className="max-w-[100%] mx-auto flex flex-col md:flex-row items-center md:items-start gap-7
+      <div
+        className="max-w-[100%] mx-auto flex flex-col md:flex-row items-center md:items-start gap-7
       
-      ">
+      "
+      >
         <div className="flex flex-col items-center md:items-start flex-1">
           <Image
             src={crystal}
@@ -39,22 +41,21 @@ const SectionFour = () => {
         {/* Right: Text and Button */}
         <div className="flex-1 text-[1.875rem] flex flex-col items-center md:items-start">
           <p
-            className="text-white font-medium text-center md:text-left max-w-xl"
+            className="font-medium text-center md:text-left  text-[#FFFFFF80] mb-10"
             style={{ lineHeight: "2.875rem", letterSpacing: "-4%" }}
           >
-            <span className="font-bold text-[#FFFFFF80]">
+            <span className="font-bold ">
               Helped launch
-              <span className="text-white"> 6 healthcare technology</span>
+              <span className="text-white"> 6 healthcare technology{" "}</span>
             </span>
-          </p>
-          <p
-            className="text-[#FFFFFF80] mb-10"
-            style={{ lineHeight: "2.875rem", letterSpacing: "-4%" }}
-          >
             startups. Led development of industry-first workforce management
             &amp; AI-driven healthcare tools. Guided major SaaS firms in
             refining product-market fit.
           </p>
+          <p
+            className=""
+            style={{ lineHeight: "2.875rem", letterSpacing: "-4%" }}
+          ></p>
           <GlobalButton variant="outlined" href="/contact">
             Need help? Let&apos;s chat! <span className="ml-2">→</span>
           </GlobalButton>

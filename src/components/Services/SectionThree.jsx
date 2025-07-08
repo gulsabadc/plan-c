@@ -246,9 +246,7 @@ const SectionThree = () => {
         title={title}
         ShortTitle={ShortTitle}
         description={description}
-        learnMoreLink="/services"
-        variant="filled"
-        showLearnMoreButton
+       
       >
         {/* Map through service items with margin-top on first item */}
         {serviceItems.map((item, index) => (

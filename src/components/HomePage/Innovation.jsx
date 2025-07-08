@@ -55,7 +55,7 @@ const Innovation = () => {
         <img src={mockup.src} alt="ChirpChecker Screenshot" />
       </div>
       <div className="pb-[5rem] w-full flex justify-center ">
-        <GlobalButton variant={"outlined"} href="#">
+        <GlobalButton variant={"outlined"} href="/amiCredible">
           Learn More
           <span className="ml-2"> →</span>
         </GlobalButton>

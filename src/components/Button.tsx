@@ -5,6 +5,7 @@ interface GlobalButtonProps {
   onClick?: () => void;
   variant?: 'filled' | 'outlined';
   href?: string;
+  target?: string;
 }
 
 const GlobalButton: React.FC<GlobalButtonProps> = ({
@@ -12,6 +13,7 @@ const GlobalButton: React.FC<GlobalButtonProps> = ({
   onClick,
   variant = 'filled',
   href,
+  target,
 }) => {
   const baseClasses = "rounded-[6px] font-semibold text-lg  hover:scale-105 transition-transform";
 
@@ -31,7 +33,7 @@ const GlobalButton: React.FC<GlobalButtonProps> = ({
   };
 
   const outlinedStyles = {
-    buttonClasses: `${baseClasses} px-[80px] py-[20px]`,
+    buttonClasses: `${baseClasses} px-[80px] py-[15px]`,
     buttonStyle: {
       color: '#FFFFFF',
       textDecoration: 'none',
@@ -52,6 +54,7 @@ const GlobalButton: React.FC<GlobalButtonProps> = ({
         className={currentStyles.buttonClasses}
         style={currentStyles.buttonStyle}
         onClick={onClick}
+        target={target}
       >
         {children}
       </a>

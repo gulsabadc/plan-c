@@ -46,8 +46,8 @@ const Footer = () => (
           </div>
           {/* Column 2 */}
           <div className="flex flex-col gap-8 ">
-            <a href="#" className="text-white hover:text-gray-300">
-              ChirpChecker
+            <a href="/amiCredible" className="text-white hover:text-gray-300">
+              AmICredible
             </a>
             <a href="/contact">Contact Us</a>
             
