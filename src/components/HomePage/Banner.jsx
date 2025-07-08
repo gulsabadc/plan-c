@@ -26,7 +26,7 @@ const Banner = () => (
         Restoring Trust in Information
       </h1>
       <div className="mt-[4rem]">
-        <GlobalButton variant="outlined">
+        <GlobalButton variant="outlined" href="/contact">
           Get in Touch
           <span className="ml-2"> →</span>
         </GlobalButton>

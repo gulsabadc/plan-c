@@ -22,7 +22,7 @@ const Porfessional = () => {
         className="w-full h-full object-contain"
       />
       <div className="mt-[4rem] flex justify-center">
-        <GlobalButton variant="filled">
+        <GlobalButton variant="outlined" href="/contact">
           Talk to Our Product Strategy Expert
           <span className="ml-2"> →</span>
         </GlobalButton>

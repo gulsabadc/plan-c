@@ -5,7 +5,7 @@ import SectionWithImageAndText from "../SectionWithImageAndText/SectionWithImage
 
 const SectionOne = () => {
   const imageText1 =
-    "Services <br/><span style='color: #BFFF00; font-weight: 600;'>– Product Strategy<br/> Consulting </span>";
+    "Services <br/><span style=' font-weight: 600;'>– Product Strategy<br/> Consulting </span>";
   const title = "Our Product Strategy Consulting helps  ";
   const description = `
 startups, healthcare tech firms, and SaaS companies define and execute winning strategies.<br/><br/>

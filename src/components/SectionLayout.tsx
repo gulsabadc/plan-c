@@ -43,22 +43,21 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
           </h2>
         </div>
 
-        <div className="w-full md:w-1/2 text-[#D9D9D9] opacity-[50%]">
+        <div className="w-full md:w-1/2 ">
           <p
-            className="text-[30px] font-semibold mb-1"
+            className="text-[30px] font-semibold mb-1 text-white"
             style={{ letterSpacing: "-4%", lineHeight: "46px" }}
           >
             {ShortTitle}{" "}
-            <span className="">{description}</span>
+            <span className="text-[#D9D9D980]">{description}</span>
           </p>
-         
         </div>
       </div>
       <div className="flex flex-col items-center w-full ">
         <div className="w-full  flex flex-col items-center ">{children}</div>
         {showLearnMoreButton && (
-          <div className="m-0 w-full flex justify-center ">
-            <GlobalButton variant={variant} href={learnMoreLink}>
+          <div className="m-0 w-full flex justify-center " >
+            <GlobalButton variant={"outlined"} href={"/services"}>
               Learn More
               <span className="ml-2"> →</span>
             </GlobalButton>

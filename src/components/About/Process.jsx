@@ -34,6 +34,7 @@ const Process = () => {
       >
         {/* List of services go here with styling */}
         <div className="mt-[5rem]">
+          <h2 className="text-white text-[30px] font-semibold mb-1 text-center mb-[4rem]">Strategic Consulting Process</h2>
           <Image src={processDiagram} alt="process" className="w-full" />
         </div>
       </SectionLayout>

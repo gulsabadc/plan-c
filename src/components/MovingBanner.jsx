@@ -33,6 +33,7 @@ export default function MovingBanner() {
           display: inline-block;
           font-size: 40px;
           text-align: center;
+          margin-top: 10px;
           font-weight: 700;
           color: #bfff00;
           letter-spacing: 2px;

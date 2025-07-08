@@ -42,9 +42,9 @@ const SectionFour = () => {
             className="text-white font-medium text-center md:text-left max-w-xl"
             style={{ lineHeight: "2.875rem", letterSpacing: "-4%" }}
           >
-            <span className="font-bold">
+            <span className="font-bold text-[#FFFFFF80]">
               Helped launch
-              <span className="text-[#C6FF4F]"> 6 healthcare technology</span>
+              <span className="text-white"> 6 healthcare technology</span>
             </span>
           </p>
           <p
@@ -55,7 +55,7 @@ const SectionFour = () => {
             &amp; AI-driven healthcare tools. Guided major SaaS firms in
             refining product-market fit.
           </p>
-          <GlobalButton variant="filled">
+          <GlobalButton variant="outlined" href="/contact">
             Need help? Let&apos;s chat! <span className="ml-2">→</span>
           </GlobalButton>
         </div>

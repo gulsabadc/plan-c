@@ -7,7 +7,7 @@ const Overview = () => {
     const imageText1 = "Overview of <br/>Plan C, LLC ";
   const title = "We are a Boston-based consulting and AI ";
   const description =
-    "innovation firm specializing in <span style='color: #BFFF00; font-weight: 600;'>strategic product management</span> & <span style='color: #BFFF00; font-weight: 600;'>trustworthy AI solutions</span>. Our mission is to empower companies to achieve product success while using AI to combat misinformation.<br/><br/>By integrating ethical AI practices, we help businesses navigate challenges and seize opportunities in a complex digital landscape, fostering trust and transparency with their users";
+    "innovation firm specializing in <span style=' font-weight: 600;'>strategic product management</span> & <span style=' font-weight: 600;'>trustworthy AI solutions</span>. Our mission is to empower companies to achieve product success while using AI to combat misinformation.<br/><br/>By integrating ethical AI practices, we help businesses navigate challenges and seize opportunities in a complex digital landscape, fostering trust and transparency with their users";
   return (
     <SectionWithImageAndText
       imageSrc={crystalImage}

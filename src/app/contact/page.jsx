@@ -43,7 +43,7 @@ export default function ContactPage() {
           >
             on
           </span>{" "}
-          <span className="playfair-italic-bold">
+          <span >
             strategy, innovation, &amp; AI-driven
           </span>
           <span className="text-[#D9D9D980]"> solutions.</span>
@@ -60,18 +60,19 @@ export default function ContactPage() {
             width={200}
             height={200}
             className="crystal-float transform-gpu animate-crystal-float animate-crystal-spin mb-4"
-            style={{ minWidth: 90, minHeight: 90 }}
+            style={{
+              minWidth: 90,
+              minHeight: 90,
+              mixBlendMode: "hard-light",
+            }}
           />
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 text-center md:text-left">
             Let's Make Something <br />
-            <span className="playfair-italic-bold"> Great!</span>
+            <span className=""> Great!</span>
           </h2>
           <div className="mt-6 w-[80%] flex flex-col gap-3">
-            <div className="bg-[#BFFF001F] rounded-[3px]  text-[26px] px-4 playfair-italic-bold ">
+            <div className="bg-[#BFFF001F] rounded-[3px]  text-[26px] px-4  ">
               Email: <a href="mailto:dan@plancllc.com">dan@plancllc.com</a>
-            </div>
-            <div className="bg-[#BFFF001F] rounded-[3px]  text-[26px] px-4 playfair-italic-bold ">
-              Phone: <a href="tel:17815210958">(781) 521-0958</a>
             </div>
           </div>
         </div>
@@ -95,7 +96,7 @@ export default function ContactPage() {
             placeholder="Your Message"
             className="bg-transparent border-b border-[#FFFFFF66] placeholder:text-[#FFFFFF4D] text-white py-3 px-2 outline-none min-h-[140px] mb-[12px]"
           />
-          <GlobalButton variant="filled">
+          <GlobalButton variant="outlined" href="/contact">
             Let's Create Magic <span className="ml-2"> →</span>
           </GlobalButton>
         </form>

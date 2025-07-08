@@ -2,7 +2,7 @@ import React from "react";
 import innovationImage from "../../assets/images/innovation-crystal.png";
 import innovationBg from "../../assets/images/Innovation-bg.png";
 import SectionLayout from "../SectionLayout";
-import mockup from "../../assets/images/mockup.png";
+import mockup from "../../assets/images/AmiCredible.png";
 import GlobalButton from "../Button";
 
 const Innovation = () => {
@@ -51,7 +51,7 @@ const Innovation = () => {
           </p>
         </div>
       </SectionLayout>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center mb-5">
         <img src={mockup.src} alt="ChirpChecker Screenshot" />
       </div>
       <div className="pb-[5rem] w-full flex justify-center ">

@@ -21,9 +21,7 @@ const SectionWithImageAndText = ({
         backgroundSize: "cover",
         backgroundPosition: "center top", // Changed to top alignment
         backgroundRepeat: "no-repeat",
-        // backgroundColor: '#00310A',
-        // margin: 0,
-        // padding: 0,
+        
       }
     : {};
 
@@ -65,7 +63,7 @@ const SectionWithImageAndText = ({
         </div>
         <div className="w-full md:w-1/2 text-[#FFFFFF80] ">
           <p
-            className="text-[30px] font-semibold mb-2 "
+            className="text-[30px] font-semibold mb-2 text-white"
             style={{
               lineHeight: "46px",
               letterSpacing: "-4%",

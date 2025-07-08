@@ -43,19 +43,15 @@ const Footer = () => (
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/services">Services</a>
-            <a href="/contact">Contact Us</a>
           </div>
           {/* Column 2 */}
           <div className="flex flex-col gap-8 ">
             <a href="#" className="text-white hover:text-gray-300">
               ChirpChecker
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              Terms & Conditions
-            </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              Privacy Policy
-            </a>
+            <a href="/contact">Contact Us</a>
+            
+            
           </div>
         </div>
 
@@ -67,7 +63,7 @@ const Footer = () => (
           className="text-left font-[400] text-lg mt-4"
           style={{ letterSpacing: "-4%", lineHeight: "100%" }}
         >
-          ©PLANC 2025 ALL RIGHT RESERVE
+          ©PLANC 2025 ALL RIGHT RESERVED
         </div>
       </div>
     </div>
