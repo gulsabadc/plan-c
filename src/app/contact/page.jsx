@@ -34,7 +34,7 @@ export default function ContactPage() {
       >
         <span
           className="text-[44px] font-semibold text-[#D9D9D9]"
-          style={{ lineHeight: "44px", letterSpacing: "-4%" }}
+          style={{ lineHeight: "44px", letterSpacing: "-4%" }} 
         >
           Reach out today to explore how we can work together{" "}
           <span
