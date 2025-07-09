@@ -5,7 +5,6 @@ import contactCrystal from "@/assets/images/contact-crystal.png";
 import GlobalButton from "@/components/Button";
 import smallTexure from "../../assets/images/texure-small.png";
 import texture from "../../assets/images/texture.png";
-// import "./contact-animations.css";
 
 const sectionStyle = {
   backgroundImage: `url(${texture.src})`,
@@ -141,8 +140,7 @@ export default function ContactPage() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          {/* <GlobalButton variant="outlined" type="submit" disabled={loading}> */}
-          <GlobalButton variant="outlined"  disabled={loading}>
+          <GlobalButton variant="outlined" type="submit" disabled={loading}>
             {loading ? (
               "Sending..."
             ) : (
