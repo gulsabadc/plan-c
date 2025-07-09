@@ -19,7 +19,7 @@ const Porfessional = () => {
       <Image
         src={porfessionalImage}
         alt="porfessional"
-        className="w-full h-full object-contain"
+        className="w-full h-full"
       />
       <div className="mt-[4rem] flex justify-center">
         <GlobalButton variant="outlined" href="/contact">

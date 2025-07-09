@@ -20,7 +20,7 @@ const TransparentNavbar = ({ currentPath }) => {
   console.log("currentPath", currentPath);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-8 pt-[2rem] text-white font-normal text-[26px] shadow-none">
+    <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-4 pt-4 text-white font-normal text-[26px] shadow-none">
       <div className="flex items-center">
         <Link href="/">
           <Image src={planCLogo} alt="PlanC Logo" width={131} height={36} />
@@ -44,13 +44,17 @@ const TransparentNavbar = ({ currentPath }) => {
       <div
         className="hamburger hidden flex-col cursor-pointer ml-4 md:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
+        style={{ zIndex: 60 }}
       >
-        <span className="w-[30px] h-1 bg-white my-1 rounded"></span>
-        <span className="w-[30px] h-1 bg-white my-1 rounded"></span>
-        <span className="w-[30px] h-1 bg-white my-1 rounded"></span>
+        <span className="w-[30px] h-1 bg-white my-1 rounded block"></span>
+        <span className="w-[30px] h-1 bg-white my-1 rounded block"></span>
+        <span className="w-[30px] h-1 bg-white my-1 rounded block"></span>
       </div>
       {menuOpen && (
-        <div className="mobile-menu absolute top-full right-0 bg-black/70 shadow-lg rounded-b-lg p-6 flex flex-col gap-6 md:hidden">
+        <div className="mobile-menu fixed top-0 left-0 w-full h-screen bg-black flex flex-col gap-6 p-8 md:hidden z-50">
+          <div className="flex justify-end mb-8">
+            
+          </div>
           {navLinks.map((link) => (
             <Link
               key={link.href}

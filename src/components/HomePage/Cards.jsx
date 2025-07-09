@@ -10,21 +10,21 @@ import VectorOverlay from "../VectorOverlay";
 const cardData = [
   {
     src: card1,
-    className: "w-[64px] sm:w-[236px] xl:w-[372px] h-[304px] sm:h-[243px]",
+    className: "w-[64px] sm:w-[236px] xl:w-[372px] h-[304px] sm:h-[160px]",
   },
   {
     src: card2,
     className:
-      "w-[100px] sm:w-[304px] xl:w-[372px] h-[100px] sm:h-[308px] z-10",
+      "w-[158px] sm:w-[304px] xl:w-[372px] h-[160px] sm:h-[308px] z-10",
   },
   {
     src: card3,
-    className: "w-[140px] sm:w-[304px] xl:w-[372px] h-[140px] sm:h-[346px]",
+    className: "w-[180px] sm:w-[304px] xl:w-[372px] h-[180px] sm:h-[346px]",
   },
   {
     src: card4,
     className:
-      "w-[100px] sm:w-[304px] xl:w-[372px] h-[100px] sm:h-[308px] z-10",
+      "w-[158px] sm:w-[304px] xl:w-[372px] h-[160px] sm:h-[308px] z-10",
   },
   {
     src: card5,
@@ -33,7 +33,7 @@ const cardData = [
 ];
 
 const Cards = () => (
-  <div className="relative overflow-hidden w-full mt-[4rem]">
+  <div className="relative overflow-hidden w-full mt-0">
     {/* <VectorOverlay className="absolute top-0 left-0 w-full h-full" /> */}
     <div className="flex justify-center items-end gap-0 ">
       {cardData.map((card, idx) => (

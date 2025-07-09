@@ -175,3 +175,10 @@ body, html {
   /* color:#BFFF00; */
 }
 
+.innovation-paragraph {
+  color: #FFFFFF80; /* Light color for the whole paragraph */
+}
+.innovation-paragraph::first-line {
+  color: #fff;      /* White for the first line only */
+}
+

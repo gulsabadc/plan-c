@@ -33,7 +33,7 @@ const GlobalButton: React.FC<GlobalButtonProps> = ({
   };
 
   const outlinedStyles = {
-    buttonClasses: `${baseClasses} px-[80px] py-[15px]`,
+    buttonClasses: `${baseClasses} px-[42px] sm:px-[80px] py-[16px] sm:py-[15px]`,
     buttonStyle: {
       color: '#FFFFFF',
       textDecoration: 'none',

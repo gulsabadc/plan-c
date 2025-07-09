@@ -21,7 +21,7 @@ const BlackNavbar = ({ currentPath }) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="w-full top-0 left-0 z-50 bg-black transition-colors duration-300 flex justify-between items-center px-8 py-6 text-white font-normal text-[1.1rem] shadow-md relative">
+    <nav className="fixed w-full top-0 left-0 z-50 bg-black transition-colors duration-300 flex justify-between items-center px-4 py-4 text-white font-normal text-[1.1rem] shadow-md">
       <div className="flex items-center">
         <Link href="/">
           <Image
@@ -51,13 +51,17 @@ const BlackNavbar = ({ currentPath }) => {
       <div
         className="hamburger hidden flex-col cursor-pointer ml-4 md:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
+        style={{ zIndex: 60 }}
       >
-        <span className="w-[30px] h-1 bg-white my-1 rounded"></span>
-        <span className="w-[30px] h-1 bg-white my-1 rounded"></span>
-        <span className="w-[30px] h-1 bg-white my-1 rounded"></span>
+        <span className="w-[30px] h-1 bg-white my-1 rounded block"></span>
+        <span className="w-[30px] h-1 bg-white my-1 rounded block"></span>
+        <span className="w-[30px] h-1 bg-white my-1 rounded block"></span>
       </div>
       {menuOpen && (
-        <div className="mobile-menu absolute top-full right-0 bg-black shadow-lg rounded-b-lg p-6 flex flex-col gap-6 md:hidden">
+        <div className="mobile-menu fixed top-0 left-0 w-full h-screen bg-black flex flex-col gap-6 p-8 md:hidden z-50">
+          <div className="flex justify-end mb-8">
+            
+          </div>
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -80,7 +84,7 @@ const BlackNavbar = ({ currentPath }) => {
             display: none !important;
           }
           .hamburger {
-            display: flex !important;a
+            display: flex !important;
           }
         }
         @media (min-width: 769px) {
@@ -95,7 +99,18 @@ const BlackNavbar = ({ currentPath }) => {
           padding: 0 8px;
           text-decoration: none;
         }
-       
+        .nav-link.active {
+          font-weight: 700;
+        }
+        .nav-link.active::after {
+          content: "";
+          display: block;
+          height: 4px;
+          background: #c6ff4f;
+          border-radius: 2px;
+          margin-top: 2px;
+          width: 100%;
+        }
       `}</style>
     </nav>
   );

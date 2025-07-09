@@ -11,7 +11,7 @@ import SectionLayout from "../../components/SectionLayout";
 
 const ServiceItem = ({ index, text, backgroundImage }) => (
   <div
-    className="text-white px-[70px] py-[50px] m-4 w-[100%] rounded-[10px] text-left font-bold text-[40px] relative overflow-hidden"
+    className="text-white sm:px-[70px] sm:py-[50px] p-[5px] sm:m-4 w-[100%] rounded-[10px] sm:text-left text-center font-bold text-[15px] sm:text-[40px] relative overflow-hidden"
     style={{
       letterSpacing: "-4%",
       lineHeight: "59px",
@@ -48,8 +48,7 @@ const ServiceItem = ({ index, text, backgroundImage }) => (
 const Services = () => {
   const title = "Services";
   const description =
-    "AI-driven product management to help organizations innovate, scale, and outperform in competitive digital landscapes. Our approach turns visionary ideas into executable, market-ready strategies.";
-  const ShortTitle = "We combine deep industry insight with";
+    "We combine deep industry insight with AI-driven product management to help organizations innovate, scale, and outperform in competitive digital landscapes. Our approach turns visionary ideas into executable, market-ready strategies.";
 
   const serviceItems = [
     { text: "Product Vision & Strategy", backgroundImage: item01 },
@@ -87,11 +86,11 @@ const Services = () => {
           <img
             src={servicesCrystal.src}
             alt="Services Icon"
-            style={{ width: "250px", height: "250px" }}
+            
           />
         }
         title={title}
-        ShortTitle={ShortTitle}
+        ShortTitle=""
         description={description}
         learnMoreLink="/services"
         variant="outlined"
