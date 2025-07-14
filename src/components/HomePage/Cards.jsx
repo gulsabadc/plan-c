@@ -33,7 +33,7 @@ const cardData = [
 ];
 
 const Cards = () => (
-  <div className="relative overflow-hidden w-full mt-0">
+  <div className="relative overflow-hidden w-full mt-0 md:mt-[6rem]">
     {/* <VectorOverlay className="absolute top-0 left-0 w-full h-full" /> */}
     <div className="flex justify-center items-end gap-0 ">
       {cardData.map((card, idx) => (

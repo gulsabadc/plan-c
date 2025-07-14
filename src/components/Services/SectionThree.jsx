@@ -9,6 +9,7 @@ import item03 from "../../assets/images/item03.png";
 import item04 from "../../assets/images/item04.png";
 import item05 from "../../assets/images/item05.png";
 import SectionLayout from "../../components/SectionLayout";
+import MobileServiceCarousel from "./MobileServiceCarousel";
 
 const serviceItems = [
   {
@@ -205,12 +206,12 @@ const SectionThree = () => {
   };
   const title = (
     <>
-      Consulting <br /> Services
+      Consulting <br className="hidden md:block" /> Services
     </>
   );
   const description =
-    "AI-driven product management to help organizations innovate, scale, and outperform in competitive digital landscapes. Our approach turns visionary ideas into executable, market-ready strategies.";
-  const ShortTitle = "We combine deep industry insight with";
+    "We combine deep industry insight with AI-driven product management to help organizations innovate, scale, and outperform in competitive digital landscapes. Our approach turns visionary ideas into executable, market-ready strategies.";
+  const ShortTitle = "";
 
   return (
     <div
@@ -236,31 +237,30 @@ const SectionThree = () => {
       ></div>
 
       <SectionLayout
-        iconOrImage={
-          <img
-            src={servicesCrystal.src}
-            alt="Services Icon"
-            style={{ width: "250px", height: "250px" }}
-          />
-        }
+        iconOrImage={<img src={servicesCrystal.src} alt="Services Icon" />}
         title={title}
         ShortTitle={ShortTitle}
         description={description}
-       
       >
-        {/* Map through service items with margin-top on first item */}
-        {serviceItems.map((item, index) => (
-          <ServiceItem
-            key={index}
-            index={index}
-            text={item.text}
-            count={item.count}
-            content={item.content}
-            backgroundImage={item.backgroundImage}
-            isActive={activeIndex === index}
-            onToggle={handleToggle}
-          />
-        ))}
+        {/* Mobile carousel */}
+        <div className="block md:hidden w-full">
+          <MobileServiceCarousel />
+        </div>
+        {/* Desktop grid */}
+        <div className="hidden md:block w-full">
+          {serviceItems.map((item, index) => (
+            <ServiceItem
+              key={index}
+              index={index}
+              text={item.text}
+              count={item.count}
+              content={item.content}
+              backgroundImage={item.backgroundImage}
+              isActive={activeIndex === index}
+              onToggle={handleToggle}
+            />
+          ))}
+        </div>
       </SectionLayout>
     </div>
   );

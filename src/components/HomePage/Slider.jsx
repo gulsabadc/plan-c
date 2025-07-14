@@ -18,7 +18,7 @@ const marqueeAnimation = `
 `;
 
 const Slider = () => (
-  <section className="w-full bg-black overflow-hidden p-0 m-0 min-h-12  relative z-20">
+  <section className="w-full bg-black overflow-hidden p-0 m-0 min-h-2 sm:min-h-12  relative z-20">
     <style>{marqueeAnimation}</style>
     <div
       className="whitespace-nowrap inline-block font-semibold  text-[rgba(255, 255, 255, 0.5)] tracking-wide py-[22px]  animate-marquee"

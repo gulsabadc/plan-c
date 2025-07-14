@@ -32,7 +32,7 @@ const Innovation = () => {
             <br />A Plan C for Truth in the Digital Age
           </h3>
           <p
-            className="innovation-paragraph text-[22px] sm:text-[30px] font-medium mt-5 leading-[28px] sm:leading-[46px] max-w-4xl text-center sm:text-left"
+            className="innovation-paragraph text-[18px] sm:text-[30px] font-medium mt-5 leading-[24px] sm:leading-[46px] max-w-4xl text-center "
             style={{ letterSpacing: "-4%" }}
           >
             Misinformation is damaging society on a global scale, leaving

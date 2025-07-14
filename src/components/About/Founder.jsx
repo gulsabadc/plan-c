@@ -7,7 +7,7 @@ import founderBg from "../../assets/images/welcome-bg.png";
 const Founder = () => {
   return (
     <section
-      className="w-full pt-[40px] sm:pt-[90px] sm:pb-[110px] pb-[0px]  px-[30px] sm:px-[160px] relative z-10"
+      className="w-full pt-[40px] sm:pt-[90px] sm:pb-[0px] pb-[0px]  px-[30px] sm:px-[160px] relative z-10"
       style={{
         backgroundImage: `url(${founderBg.src})`,
         backgroundColor: "#002200", // Dark green fallback
@@ -18,8 +18,8 @@ const Founder = () => {
     >
       <div className="max-w-screen-xl mx-auto">
         {/* Top section with crystal and title */}
-        <div className="mb-12 sm:mb-12">
-          <div className="mb-6 sm:mb-6 flex justify-center sm:justify-start">
+        <div className="mb-12 sm:mb-4">
+          <div className="mb-6 sm:mb-2 flex justify-center sm:justify-start">
             <Image
               src={founderCrystal}
               alt="Crystal"
@@ -59,7 +59,7 @@ const Founder = () => {
 
           {/* Right side - Image */}
           <div className="w-full md:w-1/2 flex justify-center sm:justify-end">
-            <div className="relative w-[300px] sm:w-[512px] h-[300px] sm:h-[566px] self-end ">
+            <div className="relative self-end ">
               <Image
                 src={founderImage}
                 alt="Daniel A. Nottingham"

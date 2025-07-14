@@ -60,11 +60,11 @@ export default function ContactPage() {
   return (
     <div
       style={sectionStyle}
-      className="min-h-screen  flex flex-col items-center pt-[90px] pb-[110px] px-[160px]"
+      className="flex flex-col items-center pt-[90px] pb-[20px] md:pb-[110px] md:mt-[6rem] px-4 sm:px-8 md:px-[10rem]"
     >
       {/* Top Banner */}
       <div
-        className="w-full w-[100%] rounded-[10px] bg-[#002106CC] mb-12 p-[28px] text-center"
+        className="w-full w-[100%] rounded-[10px] bg-[#002106CC] mb-12 p-[28px] text-center md:block hidden"
         style={{
           backgroundImage: `url(${smallTexure.src})`,
           backgroundSize: "cover",
@@ -75,7 +75,7 @@ export default function ContactPage() {
         }}
       >
         <span
-          className="text-[44px] font-semibold text-[#D9D9D9]"
+          className="text-[44px] font-semibold text-[#D9D9D9] "
           style={{ lineHeight: "44px", letterSpacing: "-4%" }}
         >
           Reach out today to explore how we can work together{" "}
@@ -92,20 +92,20 @@ export default function ContactPage() {
           <Image
             src={contactCrystal}
             alt="Contact Crystal"
-            width={200}
-            height={200}
-            className="crystal-float transform-gpu animate-crystal-float animate-crystal-spin mb-4"
+            width={100}
+            height={100}
+            className="sm:crystal-float sm:transform-gpu sm:animate-crystal-float sm:animate-crystal-spin mb-4 w-[96px] h-[77px] md:w-[200px] md:h-[200px] mr-[15rem] rotate-[-30deg] md:rotate-0"
             style={{
               minWidth: 90,
               minHeight: 90,
               mixBlendMode: "hard-light",
             }}
           />
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 text-center md:text-left md:block hidden ">
             Let's Make Something <br />
             <span className=""> Great!</span>
           </h2>
-          <div className="mt-6 w-[80%] flex flex-col gap-3">
+          <div className="mt-6 w-[80%] flex flex-col gap-3 md:block hidden">
             <div className="bg-[#BFFF001F] rounded-[3px]  text-[26px] px-4  ">
               Email: <a href="mailto:dan@plancllc.com">dan@plancllc.com</a>
             </div>
@@ -114,10 +114,13 @@ export default function ContactPage() {
 
         {/* Right Side - Contact Form */}
         <form
-          className="flex-1 bg-[#FFFFFF14] rounded-[10px] pt-[36px] pb-[48px] px-[50px] flex flex-col gap-5  min-w-[300px] max-w-lg mx-auto"
-          style={{ border: "1px solid #FFFFFF1A", minWidth: 320 }}
+          className="flex-1 bg-[#FFFFFF14] rounded-[10px] pt-5 sm:pt-9 pb-5 sm:pb-12 px-4 sm:px-8 md:px-[50px] flex flex-col gap-5 w-full max-w-lg min-w-0 mt-[-100px] md:mt-0"
+          style={{ border: "1px solid #FFFFFF1A" }}
           onSubmit={handleSubmit}
         >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 text-center md:text-left md:hidden block">
+            Get in touch
+          </h2>
           <input
             type="text"
             placeholder="Name"
@@ -136,20 +139,37 @@ export default function ContactPage() {
           />
           <textarea
             placeholder="Your Message"
-            className="bg-transparent border-b border-[#FFFFFF66] placeholder:text-[#FFFFFF4D] text-white py-3 px-2 outline-none min-h-[140px] mb-[12px]"
+            className="bg-transparent border-b border-[#FFFFFF66] placeholder:text-[#FFFFFF4D] text-white py-3 px-2 outline-none min-h-[140px] mb-3"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <GlobalButton variant="outlined" type="submit" disabled={loading}>
-            {loading ? (
-              "Sending..."
-            ) : (
-              <>
-                Let's Create Magic <span className="ml-2"> →</span>
-              </>
-            )}
-          </GlobalButton>
+          <div className="flex justify-center">
+            <GlobalButton
+              variant="outlined"
+              type="submit"
+              disabled={loading}
+              className="flex items-center justify-center"
+            >
+              {loading ? (
+                "Sending..."
+              ) : (
+                <>
+                  Let's Create Magic <span className="ml-2"> →</span>
+                </>
+              )}
+            </GlobalButton>
+          </div>
         </form>
+        <div className="flex-1 bg-[#FFFFFF14] rounded-[10px]  flex flex-col gap-1 px-[26px] py-[20px]  md:hidden block">
+          <h2 className="text-2xl font-bold text-white mb-2 text-center md:hidden block">
+            Contact Info
+          </h2>
+          
+            <div className="bg-[#BFFF001F] rounded-[3px] text-center font-semibold  p-3  ">
+              Email: <a href="mailto:dan@plancllc.com">dan@plancllc.com</a>
+            
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
           </div>
 
           <h2
-            className="font-bold text-white text-[30px] sm:text-[60px] leading-[100%] sm:leading-[60px] mb-5"
+            className="font-bold text-white text-[24px] sm:text-[60px] leading-[100%] sm:leading-[60px] mb-5"
             style={{ letterSpacing: "-3%" }}
           >
             {title}
@@ -39,7 +39,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
 
         <div className="w-full md:w-1/2 w-full md:w-1/2 text-[#FFFFFF80] text-center md:text-left">
           <p
-            className="innovation-paragraph text-[22px] sm:text-[30px] font-semibold mb-2 leading-[28px] sm:leading-[46px]"
+            className="innovation-paragraph text-[18px] sm:text-[30px] font-semibold mb-2 leading-[24px] sm:leading-[46px]"
             style={{ letterSpacing: "-3%" }}
           >
             {description}

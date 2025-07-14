@@ -6,7 +6,7 @@ import SectionFour from "../../components/Services/SectionFour";
 
 export default function Services() {
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full mt-[6rem]">
       <SectionOne />
       <SectionTwo />
       <SectionThree />

@@ -16,7 +16,7 @@ const sectionStyle = {
 const SectionFour = () => {
   return (
     <section
-      className="pt-[6.875rem] pb-[8.75rem] px-[10rem]"
+      className="py-10 px-4 md:py-[6.25rem] md:px-[10rem]"
       style={sectionStyle}
     >
       <div
@@ -28,36 +28,35 @@ const SectionFour = () => {
           <Image
             src={crystal}
             alt="Success Highlights"
-            width={12.5 * 16}
-            height={12.5 * 16}
-            className="mb-6"
+            width={100}
+            height={100}
+            className="crystal-float transform-gpu animate-crystal-float animate-crystal-spin mb-4 w-[120px] h-[120px] sm:w-[200px] sm:h-[200px]"
           />
-          <h2 className="text-white text-3xl md:text-[3.75rem] font-bold text-center md:text-left leading-tight">
-            Success
-            <br />
+          <h2 className="text-white text-[24px] md:text-[60px] font-bold text-center md:text-left leading-tight">
+            Success <br className="hidden md:block" />
             Highlights
           </h2>
         </div>
         {/* Right: Text and Button */}
-        <div className="flex-1 text-[1.875rem] flex flex-col items-center md:items-start">
+        <div className="flex-1 text-[18px] md:text-[30px] flex flex-col items-center md:items-start">
           <p
-            className="font-medium text-center md:text-left  text-[#FFFFFF80] mb-10"
-            style={{ lineHeight: "2.875rem", letterSpacing: "-4%" }}
+            className="font-medium text-center md:text-left  text-[#FFFFFF80] mb-10 leading-[28px] sm:leading-[46px]"
+            style={{ letterSpacing: "-3%" }}
           >
             <span className="font-bold ">
               Helped launch
-              <span className="text-white"> 6 healthcare technology{" "}</span>
+              <span className="text-white"> 6 healthcare technology </span>
             </span>
             startups. Led development of industry-first workforce management
             &amp; AI-driven healthcare tools. Guided major SaaS firms in
             refining product-market fit.
           </p>
-          <p
-            className=""
-            style={{ lineHeight: "2.875rem", letterSpacing: "-4%" }}
-          ></p>
+          
           <GlobalButton variant="outlined" href="/contact">
-            Need help? Let&apos;s chat! <span className="ml-2">→</span>
+            <span className="inline sm:hidden">Need help?</span>
+            <span className="hidden sm:inline">
+              Need help? Let&apos;s chat! <span className="ml-2">→</span>
+            </span>
           </GlobalButton>
         </div>
       </div>
