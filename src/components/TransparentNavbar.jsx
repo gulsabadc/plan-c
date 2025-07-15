@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import planCLogo from "../assets/images/PlanC.png";
@@ -17,10 +17,36 @@ function normalizePath(path) {
 }
 
 const TransparentNavbar = ({ currentPath }) => {
-  console.log("currentPath", currentPath);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navbarBg, setNavbarBg] = useState("bg-transparent");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY < 100) {
+        setNavbarBg("bg-transparent");
+      } else if (scrollY < 800) {
+        setNavbarBg("bg-black/20 backdrop-blur-sm");
+      } else if (scrollY < 1500) {
+        setNavbarBg("bg-[#002200]");
+      } else if (scrollY < 2500) {
+        setNavbarBg("bg-[#001a00]");
+      } else if (scrollY < 3500) {
+        setNavbarBg("bg-[#000f00]");
+      } else {
+        setNavbarBg("bg-black");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 bg-transparent transition-colors duration-300 flex justify-between items-center px-4 pt-4 text-white font-normal text-[26px] shadow-none">
+    <nav
+      className={`fixed w-full top-0 left-0 z-50 ${navbarBg} transition-all duration-500 flex justify-between items-center px-4 pt-4 text-white font-normal text-[26px] shadow-none`}
+    >
       <div className="flex items-center">
         <Link href="/">
           <Image src={planCLogo} alt="PlanC Logo" width={131} height={36} />
@@ -52,9 +78,7 @@ const TransparentNavbar = ({ currentPath }) => {
       </div>
       {menuOpen && (
         <div className="mobile-menu fixed top-0 left-0 w-full h-screen bg-black flex flex-col gap-6 p-8 md:hidden z-50">
-          <div className="flex justify-end mb-8">
-            
-          </div>
+          <div className="flex justify-end mb-8"></div>
           {navLinks.map((link) => (
             <Link
               key={link.href}

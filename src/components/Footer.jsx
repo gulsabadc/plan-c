@@ -8,7 +8,7 @@ import MovingBanner from "./MovingBanner";
 
 const Footer = () => (
   <footer
-    className="py-12 px-4 relative z-10"
+    className="pt-12 px-4 relative z-10"
     style={{
       backgroundImage: `url(${footerBgImage.src})`,
       backgroundSize: "cover",
@@ -58,11 +58,11 @@ const Footer = () => (
           className="footer-copyright text-center font-[400] text-base md:text-lg mt-4 mb-[5rem] md:mb-0 sm:text-left"
           style={{ letterSpacing: "-4%", lineHeight: "100%" }}
         >
-          ©PLAN C 2025 ALL RIGHT RESERVE
+          ©PLAN C 2025 ALL RIGHTS RESERVED
         </div>
       </div>
     </div>
-    <MovingBanner />
+    {/* <MovingBanner /> */}
     <style jsx>{`
       @media (max-width: 768px) {
         .footer-content {
